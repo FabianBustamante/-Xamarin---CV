@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.FormPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Formulario para CV" FontSize="Large" HorizontalOptions="Center" />
+
+            <!-- Nombre -->
+            <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Text="Nombre:" WidthRequest="100" />
+                <Entry x:Name="NameEntry" Placeholder="Ingrese su nombre" />
+            </StackLayout>
+
+            <!-- Edad -->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Edad:" WidthRequest="100" />
+                <Entry x:Name="AgeEntry" Placeholder="Ingrese su edad" Keyboard="Numeric" />
+            </StackLayout>
+
+            <!-- Correo -->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Correo:" WidthRequest="100" />
+                <Entry x:Name="EmailEntry" Placeholder="Ingrese su correo" Keyboard="Email" />
+            </StackLayout>
+
+            <!-- Telofono -->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Telofono:" WidthRequest="100" />
+                <Entry x:Name="PhoneEntry" Placeholder="Ingrese su telofono" Keyboard="Telephone" />
+            </StackLayout>
+
+            <!-- Boton para enviar -->
+            <Button Text="Generar CV" BackgroundColor="Green" TextColor="White" 
+                    Clicked="OnGenerateCVClicked" HorizontalOptions="Center" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.CVPage">
+    <ContentPage.Content>
+        <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Foto y Nombre -->
+            <Image Source="profile_placeholder.png" Grid.Row="0" Grid.Column="0" 
+                   WidthRequest="100" HeightRequest="100" />
+            <Label x:Name="NameLabel" Grid.Row="0" Grid.Column="1" FontSize="Large" 
+                   VerticalTextAlignment="Center" />
+
+            <!-- Informacion Personal -->
+            <Label Text="Datos Personales:" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" />
+            <StackLayout Grid.Row="1" Grid.Column="1">
+                <Label x:Name="AgeLabel" />
+                <Label x:Name="EmailLabel" />
+                <Label x:Name="PhoneLabel" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
